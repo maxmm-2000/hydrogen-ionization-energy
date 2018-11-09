@@ -30,9 +30,11 @@ if frequency == 'Y':
 
         # the equation for frequency, using wavelength, is frequency = c/wavelength
 
-        # convert wavelength from nanometers to meters
+        # convert wavelength from nanometers to meters, define nm as 10^-9
 
-        wavelength = (wavelength * (10**-9))
+        nm = (1 * (10**-9))
+
+        wavelength = (wavelength * nm)
 
         frequency = c / wavelength
 
@@ -67,11 +69,6 @@ if frequency == 'Y':
 elif frequency == 'N':
     # is they don't have the frequency, ask if they have the wavelength or energy
     wavelength = input("Do you have the wavelength? (Y/N): ")
-
-    
-            
-            
-
 
 
 

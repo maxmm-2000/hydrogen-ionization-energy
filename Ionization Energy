@@ -1,0 +1,27 @@
+# This program will calculate the energy emitted by an electron in a hydrogen atom moving from n=2 to n=1, n=3 to n=1, n=4 to n=1, etc
+
+# the Rydberg equation: energy = (-2.18*10^-18) (1/nf^2 - 1/ni^2)
+
+# -2.18 * 10^-18 is a constant that will be defined by the variable r
+r = (-2.18 * (10**-18))
+
+# nf is the final electron orbital that the electron will be on (n=1)
+final = 1
+
+# n will represent ni, the inital orbital of the electron, which will vary as the orbitals get further away from n=2
+n = 2
+
+# make a loop to find the first 1000 energies
+for loopCounter in range (0,1000):
+
+    n = n+1
+
+    # Rydberg Equation
+    energy = r * ((1/(final**2))-(1/(n**2)))
+
+    # multiply by -1 to give a positive energy value
+    print(energy * -1)
+
+
+
+

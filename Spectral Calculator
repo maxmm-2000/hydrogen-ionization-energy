@@ -1,0 +1,80 @@
+# This program will calculate the energy, wavelength, or frequency depending on the provided information by the user
+
+# define Planck's constant and the speed of light
+
+h = (6.626 * (10**-34))
+
+c = (3 * (10**8))
+
+#=====================================================================================================
+
+# the following is for finding frequency
+
+# ask the user if they have frequency
+
+frequency = input("Are you looking for the frequency? (Y/N): ")
+
+print("")
+
+if frequency == 'Y':
+    # ask user if they have wavelength
+    wavelength = input("Do you have the wavelength? (Y/N): ")
+
+    print("")
+
+    if wavelength == 'Y':
+        # if there is a value for wavelength, the equation c=wavelength*frequency will be used
+        wavelength = input("Give the value of wavelength in nanometers: ")
+
+        print("")
+
+        # the equation for frequency, using wavelength, is frequency = c/wavelength
+
+        # convert wavelength from nanometers to meters
+
+        wavelength = (wavelength * (10**-9))
+
+        frequency = c / wavelength
+
+        print("The frequency is:", frequency, "1/s.")
+
+    elif wavelength == 'N':
+        # ask the user if they have energy
+        energy = input("Do you have the energy? (Y/N): ")
+
+        print("")
+
+        # if they do not have the energy, frequency cannot be determined
+        if energy == 'N':
+            print("The frequency cannot be determined.")
+
+        elif energy == 'Y':
+            # the equation E =h*frequency will be used
+            energy = input("Give the value of energy in joules: ")
+
+            print("")
+
+            frequency = energy / h
+
+            print("The frequency is:", frequency, "1/s.")
+        # if the input is neither Y or N, the program cannot determine the frequency
+        else:
+            print("Cannot compute this input. Please enter Y or N.")
+
+    else:
+        print("Cannot compute this input. Please eneter Y or N.")
+
+elif frequency == 'N':
+    # is they don't have the frequency, ask if they have the wavelength or energy
+    wavelength = input("Do you have the wavelength? (Y/N): ")
+
+    
+            
+            
+
+
+
+
+        
+    
+        
